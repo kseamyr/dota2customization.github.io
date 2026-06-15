@@ -447,6 +447,18 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
+        /* Стили для контейнера виджета */
+        #business-geoadv-container {
+            margin: 40px auto;
+            max-width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
         /* Футер */
         footer {
             background-color: rgba(5, 6, 8, 0.9);
@@ -619,6 +631,9 @@
                 </details>
             </div>
         </section>
+
+        <div id="business-geoadv-container"></div>
+
     </div>
 
     <footer>
@@ -634,6 +649,19 @@
             <p style="font-size: 0.85rem; color: rgba(255,255,255,0.15); margin-top: 30px;">© 2026 Dota 2 customization. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="https://geoadv-partner.yandex.ru/static/partner-script.js"></script>
+    <script>
+    window.YaPartnerWidget.init({
+       container: document.querySelector('#business-geoadv-container'),
+       partnerName: 'of_1711928535',
+       partnerSiteId: 200,
+       products: ['websubscription'],
+       iframeDomain: 'yandex.ru',
+       siteName: 'http://mywebsite.ru/',
+       appearance: 'wizard'
+    });
+    </script>
 
 </body>
 </html>
